@@ -1,3 +1,5 @@
+# 제곱근 기준 제곱근보다 작은 숫자로 전부 나눠보는 방법이 가장 빠름
+
 n = int(input())
 numbers = list(map(int, input().split()))
 

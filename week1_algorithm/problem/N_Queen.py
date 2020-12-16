@@ -1,8 +1,8 @@
-import time
+
 import sys
 
 queen = int(sys.stdin.readline().rstrip())
-start_time = time.time()
+
 
 pos = [0] * queen
 flag = [False] * queen
@@ -20,23 +20,20 @@ cnt = 0
 
 def set(n, queen):
     for j in range(queen):
-        if not flag[j] and not flag_right[n+j] and not flag_left[(queen-1)-n+j]:
+        if (not flag[j]) and (not flag_right[n+j]) and (not flag_left[(queen-1)-n+j]):
             pos[n] = j
             if n == queen-1:
                 # put()
                 global cnt
                 cnt += 1
+                return
             else:
-                flag[j] = True
-                flag_right[n + j] = True
-                flag_left[(queen-1) - n + j] = True
+                flag[j] = flag_right[n + j] = flag_left[(queen-1) - n + j] = True
                 set(n+1, queen)
-                flag[j] = False
-                flag_right[n + j] = False
-                flag_left[(queen-1)- n + j] = False
+                flag[j] = flag_right[n + j] = flag_left[(queen-1) - n + j] = False
+
+
 
 
 set(0, queen)
 print(cnt)
-end_time = time.time()
-print(end_time-start_time)

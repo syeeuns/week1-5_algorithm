@@ -1,5 +1,8 @@
+import time
+
 # 소수 판별
 total = int(input())
+start = time.time()
 
 flag = 0
 for i in range(2, total):
@@ -9,3 +12,6 @@ for i in range(2, total):
             break
     else:
         print(i)
+
+end = time.time()
+print(end-start)
