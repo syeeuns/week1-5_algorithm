@@ -1,10 +1,3 @@
-# 잘 푼 풀이 참고해서 다시 품
-
-# 한 줄씩 입력 받으면서 안 익은 토마토 개수 확인
-# 토마토 익어갈때마다 안 익은 토마토 -= 1 해줌
-# 그러면 마지막에 0인거 있나없나 for문 돌면서 확인 안해도 됨
-# while문 한번 돌때마다 queue 길이만큼 돌아서 날짜 체크
-
 import sys
 from collections import deque
 read = sys.stdin.readline
