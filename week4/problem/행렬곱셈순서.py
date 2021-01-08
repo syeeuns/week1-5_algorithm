@@ -21,3 +21,12 @@ for k in range(2, n): # dp테이블 대각선 사이클 돈다 (같은 대각선
 
 print(dp[0][n-1])
 
+# dp[i][j] 를 i번째에서 j번째 행렬 곱하는 최솟값으로
+#
+# dp[i][k]   dp[k+1][j] 로 쪼갠다
+# A BCDE
+# AB CDE
+# ABC DE
+# ABCD E
+# 그러면 i의 row * k의 col * j의 col
+# 하면 세 개 곱할때지
